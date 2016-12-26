@@ -7,6 +7,8 @@ Will probably support template literal tag and a renderer function as well... or
 
 Goal API:
 ```js
+import ChildView from './child-view';
+
 const View = Mn.View.extend({
   triggers: {
     'click @ui.button': 'click'
@@ -30,6 +32,7 @@ const View = Mn.View.extend({
         <button ui="button" on-mouseover="mouseover">Click Me</button>
         <region name="content"></region>
         <div region="other"></div>
+        ${ { view: new ChildView({ model: this.model }), regionName: 'child' } }
       </div>
     `;
   }
