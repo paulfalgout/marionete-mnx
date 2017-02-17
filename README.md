@@ -22,7 +22,6 @@ const View = Mn.View.extend({
   onMouseover() {
     console.log('"on-" prefixes will add a trigger');
   },
-  onMouse
   template() {
     return mnx`
       <div>
